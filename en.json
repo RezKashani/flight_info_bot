@@ -1,0 +1,28 @@
+{
+    "languageText": "English 🇺🇸",
+    "startText": "Hi Welcome to Flight Info Telegram Bot. Please choose your desired language:",
+    "selected": " Selected",
+    "entryUndefined": "⚠ Error on Input Value ⚠",
+    "flight": {
+        "flight": "Flight ",
+        "from":"From: ",
+        "checkIn":"Check In:",
+        "gate":"Gate: ",
+        "date": "Date: ",
+        "airlineName": "Airline: ",
+        "destination": "Destination: ",
+        "scheduled": "scheduled: ",
+        "actual": "Actual: ",
+        "remarks": "Remarks: ",
+        "status": "Status: ",
+        "hall": "Hall: ",
+        "belt": "Belt: ",
+        "number": "Number ",
+        "type": "Type ",
+        "getType": "Please Select Flight Type",
+        "arrival": "Arrival Flights",
+        "departure": "Departure Flights",
+        "getDate": "Please Enter Flight Date : ",
+        "getNumber": "Please Enter Flight Number"
+    }
+}

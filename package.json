@@ -1,0 +1,15 @@
+{
+  "name": "flight_info_bot",
+  "version": "1.0.0",
+  "description": "a telegram bot to show flight information in Iran",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mysql": "^2.14.1",
+    "telebot": "^1.2.3"
+  }
+}
