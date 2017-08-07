@@ -20,9 +20,11 @@
         "number": "Number ",
         "type": "Type ",
         "getType": "Please Select Flight Type",
-        "arrival": "Arrival Flights",
-        "departure": "Departure Flights",
-        "getDate": "Please Enter Flight Date : ",
-        "getNumber": "Please Enter Flight Number"
+        "arrival": "Arrival Flights 🛬",
+        "departure": "Departure Flights 🛫",
+        "getDate": "Please Enter Flight Date : 🔢",
+        "getNumber": "Please Enter Flight Number🔤",
+        "notFound": "No flights found with given details",
+        "responseHeader" : "✈️✈️✈️ \n Flight information for "
     }
 }
