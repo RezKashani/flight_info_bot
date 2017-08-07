@@ -71,11 +71,11 @@ async function flightInfoQuery(msg, flightObj) {
             bot.sendMessage(msg.from.id, flightInfoResponse(rows), { parseMode: 'Markdown' });
         else
             bot.sendMessage(msg.from.id, lang.flight.notFound);
-        state = botStates.getFlightType;
-        showKbPrompt(msg, 'getType');
-        return;
-    });
 
+    });
+    setTimeout(() => showKbPrompt(msg, 'getType'), 1500);
+    state = botStates.getFlightType;
+    return;
 }
 
 function flightInfoResponse(dbRow) {
@@ -101,7 +101,7 @@ function flightInfoResponse(dbRow) {
         finalPart = '*' + lang.flight.hall + ' *' + hallbelt;
     }
     else if (flighttype === 'DEP') {
-        finalPart = '*' + lang.flight.gate + ' *' + gate ;
+        finalPart = '*' + lang.flight.gate + ' *' + gate;
     }
 
     return (
@@ -113,7 +113,7 @@ function flightInfoResponse(dbRow) {
         '*' + lang.flight.scheduled + ' *' + scheduled + '\n' +
         '*' + lang.flight.actual + ' *' + actual + '\n' +
         '*' + lang.flight.remarks + ' *' + (lang === en ? remarksen : remarksfa) + '\n' +
-        '*' + lang.flight.status + ' *' + (lang === en ? statusen : statusfa) + '\n'+
+        '*' + lang.flight.status + ' *' + (lang === en ? statusen : statusfa) + '\n' +
         finalPart
         //'*' + (flighttype === 'ARR' ? lang.flight.hall + ': *' + hallbelt : (lang.flight.gate + ': *' + gate + '\n' + lang.flight.checkIn + ': *' + checkin))
         //'*' + (flighttype === 'ARR' ? lang.flight.hall + ': *' + hallbelt : (/*lang.flight.gate + ': *' + gate + '\n' + lang.flight.checkIn + ': *' + checkin*/undefined))
@@ -123,7 +123,7 @@ bot.on(['/start'], (msg) => {
     let replyMarkup = bot.keyboard([
         [en.languageText, fa.languageText]], defaultOptions);
     state = botStates.langSelect;
-    return bot.sendMessage(msg.from.id, '✈✈✈'+ '\n\n' + fa.startText + '\n\n' + en.startText, { replyMarkup });
+    return bot.sendMessage(msg.from.id, '✈✈✈' + '\n\n' + fa.startText + '\n\n' + en.startText, { replyMarkup });
 });
 
 
